@@ -5,10 +5,10 @@
 const request = require('request');
 // definir los URL's para los ambientes de desarrollo y producción
 const apiOptions = {
-    server: 'http://localhost:3000/' // server local - desarrollo
+    server: 'http://localhost:3000/'// server local - desarrollo
 };
 if (process.env.NODE_ENV === 'production') {
-    apiOptions.server = 'https://examen-juan-francisco-cisneros.onrender.com' // server heroku - producción
+    apiOptions.server = 'https://examen-juan-francisco-cisneros.onrender.com'; // server heroku - producción
 }
 
 

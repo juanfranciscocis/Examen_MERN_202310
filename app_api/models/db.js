@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+
+require('./esquema_users'); // definición del esquema
+
+
 //let dbURI = 'mongodb://localhost/dw3_202310_users'; // string de conexión
 let dbURI = 'mongodb+srv://juanfrancistm2011:06012002jF_@cluster0.rdv4cdt.mongodb.net/?retryWrites=true&w=majority';
 if (process.env.NODE_ENV === 'production'){
