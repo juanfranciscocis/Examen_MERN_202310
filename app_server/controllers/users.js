@@ -65,7 +65,21 @@ const buscarUsuario = (req, res, next) => {
                 console.log('Status: ', response.statusCode);
                 console.log(body);
                 //redireccionar a la vista de actualizar
-                renderUsersUpdate(req, res, body);
+                res.render('users_update', {
+                    title: 'Actualizar usuario',
+                    materia: 'Desarrollo web 3',
+                    examen: 'Examen de medio semestre.',
+                    nombre: next.nombre,
+                    apellido: next.apellido,
+                    direccion: next.direccion,
+                    identificacion: next.identificacion,
+                    edad: next.edad,
+                    telefono: next.telefono,
+                    tipo: next.tipo,
+                    nombres: next.nombres,
+                    carrera: next.carrera,
+                    creado: next.creado,
+                });
             } else {
                 console.log('Status: ', response.statusCode);
                 res.render('error', {
