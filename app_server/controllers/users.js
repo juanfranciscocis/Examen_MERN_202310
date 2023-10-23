@@ -8,7 +8,7 @@ const apiOptions = {
     server: 'http://localhost:3000/' // server local - desarrollo
 };
 if (process.env.NODE_ENV === 'production') {
-    apiOptions.server = 'https://dw3-202310-1f0296649057.herokuapp.com/' // server heroku - producción
+    apiOptions.server = 'https://examen-juan-francisco-cisneros.onrender.com' // server heroku - producción
 }
 
 
