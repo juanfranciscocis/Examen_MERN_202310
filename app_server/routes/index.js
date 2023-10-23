@@ -1,14 +1,21 @@
 // Desarrollo web 3 - Examen de medio semestre - 202310
 const express = require('express');
 const router = express.Router();
+const { renderIndex, buscarUsuario, addUsers,renderUsersAdd, renderUsersUpdate } = require('../controllers/users');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', {
-        title: 'Examen No. 1',
-        materia: 'Desarrollo web 3',
-        examen: 'Examen de medio semestre.'
-    });
-});
+router.get('/',renderIndex);
+
+/* GET users add page. */
+router.route('/users_add')
+    .get(renderUsersAdd)
+    .post(addUsers);
+
+
+/* GET users update page. */
+router.route('/users_update')
+    .get(renderUsersUpdate)
+    .post(buscarUsuario);
+
 
 module.exports = router;

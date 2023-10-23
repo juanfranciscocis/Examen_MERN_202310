@@ -28,6 +28,7 @@ const userCreate = (req, res) => {
                 .status(400)
                 .json(err);
         });
+
 };
 
 // listar usuarios

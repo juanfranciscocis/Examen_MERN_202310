@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-let dbURI = 'mongodb://localhost/dw3_202310_users'; // string de conexión
+//let dbURI = 'mongodb://localhost/dw3_202310_users'; // string de conexión
+let dbURI = 'mongodb+srv://juanfrancistm2011:06012002jF_@cluster0.rdv4cdt.mongodb.net/?retryWrites=true&w=majority'
 if (process.env.NODE_ENV === 'production'){
     dbURI = process.env.MONGO_URI;
 }
@@ -34,7 +35,7 @@ const procShutdown = (msg, callback) => {
 // evento node SIGUSR2 
 process.once('SIGUSR2', () => {
     procShutdown('nodemon restart', () => {
-        process.kill(process.id, 'SIGUSR2');
+        process.kill(process.pid, 'SIGUSR2');
     });
 });
 
